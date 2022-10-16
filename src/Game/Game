@@ -1,0 +1,142 @@
+Quick manual about the moves on the board
+
+1. Menu appears asking user to what he wants to do, the options are:
+
+        -d : dummy player - invokes dummy player for the game
+        -r : real player - sets the type of both players as real
+        -c : connect to a server - connects to a server on a given port
+        -s : start a server - starts the server and makes creator as the first client
+        -h : help menu - prints help menu at any given time
+        -q : quit - quits the game (potentially terminating connection with the server)
+
+2. For options -d, -s, -r, this is the desired flow:
+
+        Please provide the name for the (dummy) player 1 WHITE:
+        "Example name"
+
+        Please provide the name for the (real) player 2 BLACK:
+        "Example name"
+
+        Deciding which player starts:
+        Turn of player 2:
+
+        Provide coordinate x: "example coordinate 1"
+        Provide coordinate y: "example coordinate 2"
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1|       |       |
+        2|   B   |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+        Do you want to rotate? : YES
+        Which square would you like to rotate [0-3]: 0
+        Would you like to rotate CLOCKWISE[0] or COUNTERCLOCKWISE[1]: 0
+        Performing the move !
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1| B     |       |
+        2|       |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+        Turn of player 1:
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1| B     |       |
+        2|       |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+        Provide coordinate x: "example coordinate 0"
+        Provide coordinate y: "example coordinate 1"
+        Invalid move: "A spot already exists there!"
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1| B     |       |
+        2|       |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+        Provide coordinate x: "example coordinate 1"
+        Provide coordinate y: "example coordinate 1"
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1| B W   |       |
+        2|       |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+        Do you want to rotate? : NO
+        Performing the move !
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1| B W   |       |
+        2|       |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+3. If parameter -c is chosen then:
+
+        Please provide the IP and port of the server you would like to connect to:
+        192.168.1.45 21567
+        Please provide the username you would like to use:
+        Iggy
+
+        Connecting to the server, please wait!
+
+        Connection received, starting the game !
+
+        Deciding which player starts:
+        Turn of player 1:
+
+        Provide coordinate x:
+        Provide coordinate y:
+
+           0 1 2 | 3 4 5
+        0|       |       |
+        1|       |       |
+        2|   B   |       |
+         |-------|-------|
+        3|       |       |
+        4|       |       |
+        5|       |       |
+
+4. If parameter -s is chosen then
+
+    A new server is being created, which port would you like to use?
+    0
+    Choosing a random port, please wait!
+    The server has been started on IP: IP, port: PORT
+    Please use the -c to start a game on this server!
+
+    -d : dummy player - invokes dummy player for the game
+    -s : smart player - invokes smart player for the game
+    -r : real player - sets the type of both players as real
+    -c : connect to a server - connects to a server on a given port
+    -s : start a server - starts the server and makes creator as the first client
+    -h : help menu - prints help menu at any given time
+    -q : quit - quits the game (potentially terminating connection with the server)
+
+
+5. If at any given moment parameters -h, -q are chosen then:
+    -h : will print the menu (we will see if this is even useful)
+    -q : will terminate the connection, and end the game. Will turn off the system

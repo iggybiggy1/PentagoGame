@@ -1,0 +1,73 @@
+Initial State of the board
+e = Slot.EMPTY
+B = Slot.BLACK
+W = Slot.WHITE
+
+           0 1 2 | 3 4 5
+        0| e e e | e e e |
+        1| e e e | e e e |
+        2| e e e | e e e |
+         |-------|-------|
+        3| e e e | e e e |
+        4| e e e | e e e |
+        5| e e e | e e e |
+
+
+
+Rotation
+Rotation.COUNTERCLOCKWISE
+Square 0
+
+           0 1 2 | 3 4 5
+        0| B     | W W B |
+        1| B W   |   W B |
+        2| W   B | W   B |
+         |-------|-------|
+        3| W W B | B B   |
+        4| B W   | W   W |
+        5|     W |       |
+
+Rotation
+Rotation.COUNTERCLOCKWISE
+Square 1
+
+           0 1 2 | 3 4 5
+        0| W B B | B B B |
+        1|   W   | W W   |
+        2| B     | W   W |
+         |-------|-------|
+        3| W W B | B B   |
+        4| B W   | W   W |
+        5|     W |       |
+
+        BLACK wins horizontally !
+
+Rotation
+Rotation.CLOCKWISE
+Square 2
+
+           0 1 2 | 3 4 5
+        0| W B B | W W B |
+        1|   W   |   W B |
+        2| B     | W   B |
+         |-------|-------|
+        3|   B W | B B   |
+        4|   W W | W   W |
+        5| W   B |       |
+
+        WHITE wins diagonally !
+
+Rotation
+Rotation.CLOCKWISE
+Square 3
+
+           0 1 2 | 3 4 5
+        0| W B B | W W B |
+        1|   W   |   W B |
+        2| B     | W   B |
+         |-------|-------|
+        3| W W B |   W B |
+        4| B W   |     B |
+        5|     W |   W   |
+
+        BLACK wins vertically !
